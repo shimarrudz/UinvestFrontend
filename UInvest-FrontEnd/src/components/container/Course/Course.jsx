@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineUser, AiOutlineStar } from "react-icons/ai";
-import { getDadosCursos } from "../../../Data";
+// import { getDadosCursos } from "../../../Data";
 
 import courses0 from "../../../assets/courses0.jpg";
 import courses1 from "../../../assets/courses1.jpg";
@@ -31,15 +31,15 @@ const Course = ({ idCarrosel }) => {
 
   const [curso, setCurso] = useState({});
 
-  useEffect(() => {
-    async function fetchData() {
-      const dadosCursos = await getDadosCursos();
-      const cursoEncontrado = dadosCursos.find(curso => curso.idCarrosel === idCarrosel);
-      setCurso(cursoEncontrado || {});
-    }
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const dadosCursos = await getDadosCursos();
+  //     const cursoEncontrado = dadosCursos.find(curso => curso.idCarrosel === idCarrosel);
+  //     setCurso(cursoEncontrado || {});
+  //   }
 
-    fetchData();
-  }, [idCarrosel]);
+  //   fetchData();
+  // }, [idCarrosel]);
 
   return (
     <div className="p-2 shadow-lg min-w-[15rem] bg-white rounded-md course-item">

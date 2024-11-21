@@ -151,26 +151,26 @@ const Cadastro = () => {
     setError("");
 
 
-    // fetch(`http://localhost:8080/UInvest/usuario`, {
-    //   method: "post",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(usuario),
-    // })
-    //   .then(() => {
-    //     toast.success("Cadastro feito com sucesso!");
-    //     setTimeout(() => {
-    //       window.location = "/login";
-    //     }, 2000);
-    //   })
-    //   .catch((error) => {
-    //     setError("Ocorreu um erro ao cadastrar. Por favor, tente novamente.");
-    //     console.error(error);
-    //   })
-    //   .finally(() => {
-    //     setLoading(false);
-    //   });
+    fetch(`http://localhost:8080/UInvest/usuario`, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(usuario),
+    })
+      .then(() => {
+        toast.success("Cadastro feito com sucesso!");
+        setTimeout(() => {
+          window.location = "/login";
+        }, 2000);
+      })
+      .catch((error) => {
+        setError("Ocorreu um erro ao cadastrar. Por favor, tente novamente.");
+        console.error(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (

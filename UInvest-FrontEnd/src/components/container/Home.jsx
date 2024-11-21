@@ -1,6 +1,6 @@
 import React from "react";
 import hero from "../../assets/personagem3dCERTO.png";
-import { getDadosCursos } from "../../Data";
+// import { getDadosCursos } from "../../Data";
 const Home = () => {
   const container = {
     hidden: {
@@ -34,14 +34,14 @@ const Home = () => {
           <p className="text-sm leading-7 text-gray max-w-sm">
             Cadastre-se na U Invest, você terá acesso a cursos imperdíveis e muito mais, venha aprender com a gente!
           </p>
-          <div className="mt-6">
+          {/* <div className="mt-6">
             <button onClick={getDadosCursos} className="px-6 py-3 font-bold text-white bg-Teal rounded-lg mr-4 text-sm button-styled-vm">
               Vamos começar!
             </button>
             <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm button-styled">
               Descubra
             </button>
-          </div>
+          </div>*/}
         </div>
         <div className="md:w-[60%]">
           <img src={hero} alt="" />

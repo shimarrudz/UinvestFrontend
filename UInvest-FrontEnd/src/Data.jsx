@@ -76,7 +76,8 @@ export const categories = [
 export async function getDadosCursos() {
   try {
     // const response = await axios.get("http://localhost:8080/UInvest/cursos");
-    const cursosJson = response.data;
+    // const cursosJson = response.data;
+    const cursosJson = null;
     const cursosManipulados = [];
 
     cursosJson.forEach((objeto, index) => {

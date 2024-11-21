@@ -3,7 +3,7 @@ import { categories } from "../../../Data";
 import Categories from "./Categories";
 import Course from "./Course";
 import { motion } from "framer-motion";
-import { getDadosCursos } from "../../../Data";
+// import { getDadosCursos } from "../../../Data";
 
 const Courses = () => {
   const container = {
@@ -23,18 +23,19 @@ const Courses = () => {
 
   const [cursos, setCursos] = useState([]);
 
-  useEffect(() => {
-    async function fetchCursos() {
-      try {
-        const data = await getDadosCursos();
-        setCursos(data);
-      } catch (error) {
-        console.error(error);
-      }
-    }
+  // useEffect(() => {
+  //   async function fetchCursos() {
+  //     try {
+  //       const data = await getDadosCursos();
+  //       setCursos(data);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   }
 
-    fetchCursos();
-  }, []);
+    // fetchCursos();
+  // }, []
+// );
 
   return (
     <div className="section" id="cursos">
@@ -56,15 +57,15 @@ const Courses = () => {
           return <Categories key={category.id} {...category} />;
         })}
       </motion.div>
-      <div className="text-xl font-bold mt-32">Nossos cursos</div>
-      <div className="mt-12 overflow-x-hidden w-full relative">
-        <div className="flex md:w-full md:w-[120%] xs:w-[340%] w-[480%] animate-slide">
-          {cursos.map((curso) => {
+      {/* <div className="text-xl font-bold mt-32">Nossos cursos</div> */}
+      {/* <div className="mt-12 overflow-x-hidden w-full relative"> */}
+        {/* <div className="flex md:w-full md:w-[120%] xs:w-[340%] w-[480%] animate-slide"> */}
+          {/* {cursos.map((curso) => {
             return <Course key={curso.idCarrosel} {...curso} />;
-          })}
-        </div>
+          })} */}
+        {/* </div> */}
       </div>
-    </div>
+    // </div>
   );
 };
 

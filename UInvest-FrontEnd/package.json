@@ -21,7 +21,6 @@
     "react-bootstrap": "^2.7.4",
     "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
-    "react-education": "file:",
     "react-icons": "^4.8.0",
     "react-modal": "^3.16.1",
     "react-refresh": "^0.14.0",
